@@ -1,0 +1,33 @@
+{
+    "name": "omnipos/saas",
+    "description": "OmniPOS - A Multi-tenant SaaS for Retail and Hospitality",
+    "type": "project",
+    "license": "proprietary",
+    "minimum-stability": "stable",
+    "require": {
+        "php": "^8.2",
+        "vlucas/phpdotenv": "^5.6",
+        "monolog/monolog": "^3.5",
+        "firebase/php-jwt": "^6.10",
+        "predis/predis": "^2.2",
+        "cboden/ratchet": "^0.4.4",
+        "clue/redis-react": "^2.6",
+        "react/event-loop": "^1.5",
+        "mpdf/mpdf": "^8.2",
+        "phpmailer/phpmailer": "^6.9",
+        "delight-im/cookie": "^3.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "OmniPOS\\": "src/"
+        },
+        "files": [
+            "src/Core/helpers.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "OmniPOS Team"
+        }
+    ]
+}

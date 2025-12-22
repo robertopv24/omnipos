@@ -1,0 +1,132 @@
+/* POS Interface Styles - OmniPOS */
+
+.pos-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 1.5rem;
+    height: calc(100vh - var(--header-height) - 4rem);
+}
+
+.pos-products {
+    padding: 1.5rem;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.pos-cart {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+}
+
+.header-tools {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.search-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-bright);
+    background: rgba(15, 23, 42, 0.6);
+    color: white;
+    font-size: 0.95rem;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 1.25rem;
+}
+
+.product-card {
+    padding: 1.25rem;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.19, 1, 0.22, 1);
+    text-align: center;
+    border-radius: 16px;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.product-card img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 0.75rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.product-card .name {
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 0.4rem;
+    color: var(--text-pure);
+}
+
+.product-card .price {
+    color: var(--primary);
+    font-weight: 800;
+    font-size: 1.05rem;
+}
+
+.cart-items-container {
+    flex: 1;
+    overflow-y: auto;
+    margin-bottom: 2rem;
+    padding-right: 0.5rem;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.cart-summary {
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-bright);
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+}
+
+.summary-total {
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+/* Modals inside POS */
+.pos-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(10px);
+    z-index: 2100;
+    align-items: center;
+    justify-content: center;
+}
+
+.ticket-view {
+    background: white;
+    padding: 30px;
+    width: 320px;
+    color: #1a1a1a;
+    font-family: 'Courier New', Courier, monospace;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+}
